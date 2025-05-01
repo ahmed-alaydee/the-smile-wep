@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
               </a>
               
 <a
-  href="https://wa.me/2201103133750"
+   href="https://wa.me/21103133750"
   target="_blank"
   rel="noopener noreferrer"
   className="text-gray-400 transition-colors hover:text-rose-400"
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
 </a>
               
                       <a
-  href="tel:+2201103133750"
+  href="tel:+21103133750"
   className="text-gray-400 transition-colors hover:text-rose-400"
 >
   <Phone className="w-5 h-5" />
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <Phone className="h-5 w-5 text-rose-400 mt-0.5 flex-shrink-0" />
-                <span className="ml-2 text-gray-400">01103133750</span>
+                <span className="ml-2 text-gray-400">+21103133750</span>
               </li>
               <li className="flex items-start">
                 <Mail className="h-5 w-5 text-rose-400 mt-0.5 flex-shrink-0" />
