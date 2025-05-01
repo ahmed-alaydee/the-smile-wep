@@ -28,7 +28,7 @@ import bewil from '../image/imagePharmasy/bewil.jpeg';
 import Healtypharmasy from '../image/imagePharmasy/Healtypharmasy.jpeg';
 import abdulahhsydalaya from '../image/imagePharmasy/abdulahhsydalaya.jpeg';
 import al5ayre from '../image/imagePharmasy/al5ayre.jpeg';
-import alaaam from '../image/imagePharmasy/alaaam.jpeg';
+// import alaaam from '../image/imagePharmasy/alaaam.jpeg';
 import sehasydalaya from '../image/imagePharmasy/sehasydalaya.jpeg';
 
 
@@ -262,7 +262,7 @@ export const pharmacies: Pharmacy[] = [
     id: 4,
     name: "Healtypharmasy",
     nameAr: "  هيلثي ",
-    image: al5ayre,
+    image: Healtypharmasy,
     branches: [
       {
         id: 301,
@@ -315,7 +315,7 @@ export const pharmacies: Pharmacy[] = [
     id: 6,
     name: "Abdullah Pharmacy",
     nameAr: "  عبد الله  ",
-    image: al5ayre,
+    image: abdulahhsydalaya,
     branches: [
       {
         id: 301,
