@@ -6,6 +6,34 @@ import hermaskdetalis from '../image/hermaskdetals.jpeg';
 import shampoproductditals from '../image/shampoproductdetails.jpeg';
 import productsearm from '../image/productsearm.jpeg';
 import productsearmdeatalis from '../image/serum2.jpeg';
+import conditinal from '../image/image-ditals/conditinal.jpeg';
+import conditinimage from '../image/image-ditals/conditin-image.jpeg';
+import conditinimageeeee from '../image/image-ditals/conditinimageeeee.jpeg';
+import shampoimage from '../image/image-ditals/shampo-image.jpeg';
+import shmpoimage from '../image/image-ditals/shmpoimage.jpeg';
+import shmpoimagezro from '../image/image-ditals/shamopozero.jpeg';
+import shmpoimagezro2 from '../image/image-ditals/shmpozero.jpeg';
+import shampozerrrrr from '../image/image-ditals/shampozerrrrr.jpeg';
+import zeroooooeytetet from '../image/image-ditals/zeroooooeytetet.jpeg';
+import serooolhlh from '../image/image-ditals/serooolhlh.jpeg';
+import hairmaskimage from '../image/image-ditals/hirmask-image.jpeg';
+import h from '../image/image-ditals/h.jpeg';
+import wertyuio from '../image/image-ditals/wertyuio.jpeg';
+import asdfiop from '../image/image-ditals/asdfiop.jpeg';
+import supproduct1zero from '../image/image-ditals/supproduct1zero.jpeg';
+import hirsermimage from '../image/image-ditals/hirserm-image.jpeg';
+import aertyuiop from '../image/image-ditals/aertyuiop.jpeg';
+import alzlapy from '../image/imagePharmasy/alzlapy.jpeg';
+import bewil from '../image/imagePharmasy/bewil.jpeg';
+import Healtypharmasy from '../image/imagePharmasy/Healtypharmasy.jpeg';
+import abdulahhsydalaya from '../image/imagePharmasy/abdulahhsydalaya.jpeg';
+import al5ayre from '../image/imagePharmasy/al5ayre.jpeg';
+import alaaam from '../image/imagePharmasy/alaaam.jpeg';
+import sehasydalaya from '../image/imagePharmasy/sehasydalaya.jpeg';
+
+
+
+
 
 
 export interface Product {
@@ -47,6 +75,9 @@ export const products: Product[] = [
     thumbnails: [
       imageproduct,
       productdetais,
+      conditinimage,
+      conditinal,
+      conditinimageeeee,
     ],
     category: "Hair-care"
   },
@@ -57,10 +88,15 @@ export const products: Product[] = [
     description: "A nourishing shampoo that’s packed with essential vitamins to strengthen your hair and boost its health. It’s got argan oil to repair dry and damaged hair, aloe vera extract to soothe and hydrate your scalp, and castor oil to promote hair growth and make it thicker.With a blend of humectants, it locks in moisture deep into your hair, plus protein oil that helps repair damaged strands and leaves your hair feeling smooth and shiny. It’s totally sulfate-free, so it’s gentle on both your hair and scalp, making it perfect for color-treated or chemically processed hair.",
     descriptionAr: "شامبو مغذي للشعرتركيبة متطورة غنية بمجموعة من الفيتامينات الأساسية لتقوية الشعر وتعزيز صحته. يحتوي على زيت الأرجان لترميم الشعر الجاف والتالف، وخلاصة الصبار لتهدئة فروة الرأس وترطيبها، وزيت الخروع لتحفيز نمو الشعر وزيادة كثافته.مزود بمجموعة الهيموكتانت (Humectants) التي تحافظ على رطوبة الشعر بعمق، بالإضافة إلى زيت البروتين الذي يعمل على إصلاح الألياف التالفة ومنح الشعر نعومة ولمعانًا طبيعيًا.خالٍ تمامًا من السلفات، مما يجعله لطيفًا على الشعر وفروة الرأس ومثاليًا للشعر المصبوغ والمعالج كيميائيًا",
     price: 19.99,
-    image: productimage2,
+    image:shmpoimagezro  ,
     thumbnails: [
-      productimage2,
-      shampoproductditals,
+      shmpoimagezro,  
+shampozerrrrr,
+      shmpoimagezro2,
+      zeroooooeytetet,
+      serooolhlh
+      
+   
     ],
     category: "Hair-care"
   },
@@ -75,7 +111,13 @@ export const products: Product[] = [
     image: hermaskproduct,
     thumbnails: [
 hermaskproduct,
-hermaskdetalis
+hermaskdetalis,
+hairmaskimage,
+h,
+wertyuio
+
+
+
  
     ],
     category: "Hair-care"
@@ -94,7 +136,11 @@ hermaskdetalis
     image: productsearm,
     thumbnails: [
       productsearm,
-      productsearmdeatalis
+      productsearmdeatalis,
+      asdfiop,
+      supproduct1zero,
+      hirsermimage,
+      
 
     ],
     category: "Hair-care"
@@ -110,96 +156,176 @@ hermaskdetalis
     image: productimage2,
     thumbnails: [
      productimage2,
-     shampoproductditals
+     shampoproductditals,
+     shmpoimage,
+     shampoimage,
+     aertyuiop
+
+   
 
 
     ],
-    category: "Eyes"
+    category: "Hair-care"
   },
-  // {
-  //   id: 6,
-  //   name: "Hydrating Face Mist",
-  //   nameAr: "رذاذ وجه مرطب",
-  //   description: "A refreshing face mist that hydrates and revitalizes the skin. Can be used before makeup or throughout the day for a boost of hydration.",
-  //   descriptionAr: "رذاذ وجه منعش يرطب وينعش البشرة. يمكن استخدامه قبل المكياج أو طوال اليوم للحصول على دفعة من الترطيب.",
-  //   price: 16.99,
-  //   image: "https://images.pexels.com/photos/3738359/pexels-photo-3738359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //   thumbnails: [
-  //     "https://images.pexels.com/photos/3738359/pexels-photo-3738359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //     "https://images.pexels.com/photos/2693622/pexels-photo-2693622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  //     "https://images.pexels.com/photos/3373744/pexels-photo-3373744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-  //   ],
-  //   category: "Skincare"
-  // }
+
 ];
+
+
 
 export const pharmacies: Pharmacy[] = [
   {
     id: 1,
-    name: "HealthPlus Pharmacy",
-    nameAr: "صيدلية هيلث بلس",
-    image: "https://images.pexels.com/photos/5699516/pexels-photo-5699516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Al-Zaghbi Pharmacy",
+    nameAr: "صيدلية  الزغبي",
+    image: alzlapy,
     branches: [
       {
         id: 101,
-        location: "Downtown, Main Street",
-        locationAr: "وسط المدينة، الشارع الرئيسي",
+        location: "Nasr City",
+        locationAr: "مدينه نصر ",
         coordinates: [34.0522, -118.2437]
       },
       {
-        id: 102,
-        location: "Northside Mall",
-        locationAr: "مول الجانب الشمالي",
-        coordinates: [34.0610, -118.2522]
-      }
+        id: 101,
+        location: "New Cairo",
+        locationAr: "  التجمع الخامس",
+        coordinates: [34.0522, -118.2437]
+      },
+  
     ]
   },
   {
     id: 2,
-    name: "MediCare Pharmacy",
-    nameAr: "صيدلية ميدي كير",
-    image: "https://images.pexels.com/photos/4107198/pexels-photo-4107198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Bee Well Pharmacy",
+    nameAr: "صيدلية  بي ويل ",
+    image:bewil ,
     branches: [
       {
         id: 201,
-        location: "Eastside Plaza",
-        locationAr: "بلازا الجانب الشرقي",
+        location: "New Cairo",
+        locationAr: "  التجمع الخامس ",
         coordinates: [34.0650, -118.2300]
       },
       {
         id: 202,
-        location: "Westfield Center",
-        locationAr: "مركز ويستفيلد",
+        location: " Heliopolis",
+        locationAr: " مصر الجديده",
         coordinates: [34.0540, -118.2580]
       },
       {
         id: 203,
-        location: "Ocean Avenue",
-        locationAr: "شارع المحيط",
+        location: "Nasr City",
+        locationAr: " مدينه نصر ",
+        coordinates: [34.0190, -118.4980]
+      },
+         {
+        id: 204,
+        location: "Faisal",
+        locationAr: " فيصل ",
         coordinates: [34.0190, -118.4980]
       }
     ]
   },
   {
     id: 3,
-    name: "GreenLife Pharmacy",
-    nameAr: "صيدلية جرين لايف",
-    image: "https://images.pexels.com/photos/5699464/pexels-photo-5699464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Al-Khabiri Pharmacy",
+    nameAr: "  الخبيري ",
+    image: al5ayre,
     branches: [
       {
         id: 301,
-        location: "Central Park",
-        locationAr: "الحديقة المركزية",
+        location: "Elmohandseen",
+        locationAr: " المهنديسن",
         coordinates: [34.0722, -118.2639]
       },
       {
         id: 302,
-        location: "Lakeview Drive",
-        locationAr: "شارع ليك فيو",
+        location: "October ",
+        locationAr: "  اكتوبر",
+        coordinates: [34.0819, -118.2468]
+      },
+         {
+        id: 302,
+        location: "Maadi ",
+        locationAr: "  المعادي",
+        coordinates: [34.0819, -118.2468]
+      },
+         {
+        id: 302,
+        location: "Faisal ",
+        locationAr: "  فيصل",
         coordinates: [34.0819, -118.2468]
       }
     ]
-  }
+  },
+   {
+    id: 4,
+    name: "Healtypharmasy",
+    nameAr: "  هيلثي ",
+    image: al5ayre,
+    branches: [
+      {
+        id: 301,
+        location: "Elmohandseen",
+        locationAr: " المهنديسن",
+        coordinates: [34.0722, -118.2639]
+      },
+      {
+        id: 302,
+        location: "New Cairo ",
+        locationAr: "  التجمع",
+        coordinates: [34.0819, -118.2468]
+      },
+         {
+        id: 302,
+        location: "Maadi ",
+        locationAr: "  المعادي",
+        coordinates: [34.0819, -118.2468]
+      },
+         {
+        id: 302,
+        location: "Heliopolis ",
+        locationAr: "  مصر الجديده",
+        coordinates: [34.0819, -118.2468]
+      }
+    ]
+  },
+    {
+    id: 5,
+    name: "Health Pharmacy",
+    nameAr: "  صحه ",
+    image: sehasydalaya,
+    branches: [
+      {
+        id: 301,
+        location: "Nasr City",
+        locationAr: " مدينه نصر ",
+        coordinates: [34.0722, -118.2639]
+      },
+      {
+        id: 302,
+        location: "New Cairo ",
+        locationAr: "  التجمع",
+        coordinates: [34.0819, -118.2468]
+      },
+         
+    ]
+  },
+    {
+    id: 6,
+    name: "Abdullah Pharmacy",
+    nameAr: "  عبد الله  ",
+    image: al5ayre,
+    branches: [
+      {
+        id: 301,
+        location: "Obour city",
+        locationAr: "العبور",
+        coordinates: [34.0722, -118.2639]
+      },
+   
+    ]
+  },
 ];
 
 export const jobPositions = [

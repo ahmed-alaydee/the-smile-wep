@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import ProductsSection from './components/ProductsSection';
-// import PharmaciesSection from './components/PharmaciesSection';
+import PharmaciesSection from './components/PharmaciesSection';
 import JobsSection from './components/JobsSection';
 import MapSection from './components/MapSection';
 import Footer from './components/Footer';
@@ -17,7 +17,7 @@ function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <div className="min-h-screen font-sans dark:bg-gray-900 dark:text-white transition-colors duration-200">
+        <div className="min-h-screen font-sans transition-colors duration-200 dark:bg-gray-900 dark:text-white">
         {selectedProduct !== null ? (
           <ProductDetail 
             productId={selectedProduct} 
@@ -29,7 +29,7 @@ function App() {
             <HeroSection />
             <AboutSection />
             <ProductsSection onProductSelect={setSelectedProduct} />
-            {/* <PharmaciesSection /> */}
+            <PharmaciesSection />
             <JobsSection />
             <MapSection />
             <Footer />

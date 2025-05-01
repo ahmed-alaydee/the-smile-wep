@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import desktopBg from '../image/bahground-1.png';
-import mobileBg from '../image/bacground-2.jpeg';
+import mobileBg from '../image/image-ditals/productall.jpeg';
 import { useMediaQuery } from 'react-responsive';
 
 const HeroSection: React.FC = () => {
@@ -38,7 +38,7 @@ const HeroSection: React.FC = () => {
 
   return (
     <div
-      className="relative flex items-center justify-center min-h-screen overflow-hidden bg-white dark:text-gray-100"
+      className="flex overflow-hidden relative justify-center items-center min-h-screen bg-white dark:text-gray-100"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -47,31 +47,38 @@ const HeroSection: React.FC = () => {
       }}
     >
       {/* Main Content */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-        <h1
-          ref={titleRef}
-          className="text-5xl md:text-6xl font-playfair font-bold text-white mb-4"
-          style={{ textShadow: '0 2px 4px rgba(0,0,0,0.3)' }}
-        >
-          The Smile Cosmetics {/* أو {t('hero.title')} لو كانت من الترجمة */}
-        </h1>
+   <div className="relative z-10 px-4 mx-auto max-w-4xl text-center sm:px-6 lg:px-8">
+  <h1
+    ref={titleRef}
+    className="mb-4 text-3xl sm:text-4xl md:text-6xl font-bold text-[#5A1F1F] md:text-white text-center font-playfair"
+    style={{ textShadow: '0 2px 4px rgba(0,0,0,0.15)', }}
+  >
+    The Smile Cosmetics {/* {t('hero.title')} */}
+  </h1>
 
-        <p ref={subtitleRef} className="text-2xl md:text-3xl text-rose-200 mb-6 italic">
-          {t('hero.subtitle')}
-        </p>
+  <p
+    ref={subtitleRef}
+    className="mb-4 text-lg sm:text-xl md:text-3xl italic font-medium text-[#7A2E2E] md:text-rose-600 text-center"
+  >
+    {t('hero.subtitle')}
+  </p>
 
-        <p ref={descriptionRef} className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-          {t('hero.description')}
-        </p>
+  <p
+    ref={descriptionRef}
+    className="mx-auto mb-6 max-w-md text-base sm:text-lg md:text-xl font-semibold leading-relaxed text-[#4A1D1D] md:text-rose-600 text-center md:max-w-2xl bg-white/70 md:bg-transparent px-4 py-2 md:px-0 md:py-0 rounded-xl md:rounded-none shadow-sm md:shadow-none"
+  >
+    {t('hero.description')}
+  </p>
 
-        <button
-          ref={buttonRef}
-          onClick={scrollToProducts}
-          className="px-8 py-3 bg-rose-500 text-white rounded-full font-medium transform transition hover:bg-rose-600 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-opacity-50 shadow-lg"
-        >
-          {t('hero.cta')}
-        </button>
-      </div>
+  <button
+    ref={buttonRef}
+    onClick={scrollToProducts}
+    className="px-8 py-3 font-medium text-white bg-rose-500 rounded-full shadow-lg transition transform hover:bg-rose-600 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-opacity-50"
+  >
+    {t('hero.cta')}
+  </button>
+</div>
+
     </div>
   );
 };

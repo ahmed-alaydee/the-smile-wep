@@ -37,21 +37,21 @@ const Navbar: React.FC = () => {
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-white/90 backdrop-blur-md shadow-md' 
+          ? 'shadow-md backdrop-blur-md bg-white/90' 
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <a href="#" className="flex items-center">
-              <Sparkles className="h-8 w-8 text-rose-500" />
+              <Sparkles className="w-8 h-8 text-rose-500" />
               <span className={`font-bold text-lg ${scrolled ? 'text-gray-900' : 'text-white'} ml-2`}>The Smile Cosmetics</span>
             </a>
             {/* <img src={logo} alt="logo" className='' style={{ width:'80px',height:'80px', borderRadius:'50%', }} /> */}
           </div>
           
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden items-center space-x-4 md:flex">
             <button
               onClick={() => scrollToSection('about')}
               className={`px-3 py-2 rounded-md text-sm font-medium ${
@@ -88,31 +88,31 @@ const Navbar: React.FC = () => {
             {/* Remove dark mode toggle */}
             {/* <button
               onClick={toggleTheme}
-              className="ml-4 p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-colors"
+              className="p-2 ml-4 bg-gray-200 rounded-full transition-colors hover:bg-gray-300"
             >
-              {theme === 'dark' ? <Sun className="h-5 w-5 text-yellow-500" /> : <Moon className="h-5 w-5 text-blue-500" />}
+              {theme === 'dark' ? <Sun className="w-5 h-5 text-yellow-500" /> : <Moon className="w-5 h-5 text-blue-500" />}
             </button> */}
 
             <button
               onClick={toggleLanguage}
               className={`ml-4 px-3 py-1 rounded border ${
                 scrolled 
-                  ? 'border-rose-500 text-rose-500 hover:bg-rose-500 hover:text-white' 
-                  : 'border-white text-white hover:bg-white hover:text-rose-500'
+                  ? 'text-rose-500 border-rose-500 hover:bg-rose-500 hover:text-white' 
+                  : 'text-white border-white hover:bg-white hover:text-rose-500'
               } transition-colors`}
             >
               {language === 'en' ? 'العربية' : 'English'}
             </button>
           </div>
           
-          <div className="md:hidden flex items-center">
+          <div className="flex items-center md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className={`p-2 rounded-md ${
                 scrolled ? 'text-gray-800' : 'text-white'
               }`}
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {mobileMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -126,35 +126,35 @@ const Navbar: React.FC = () => {
       
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg rounded-b-lg">
+        <div className="bg-white rounded-b-lg shadow-lg md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <button
               onClick={() => scrollToSection('about')}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-rose-500 hover:bg-gray-50 w-full text-left"
+              className="block px-3 py-2 w-full text-base font-medium text-left text-gray-800 rounded-md hover:text-rose-500 hover:bg-gray-50"
             >
               {t('nav.about')}
             </button>
             <button
               onClick={() => scrollToSection('products')}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-rose-500 hover:bg-gray-50 w-full text-left"
+              className="block px-3 py-2 w-full text-base font-medium text-left text-gray-800 rounded-md hover:text-rose-500 hover:bg-gray-50"
             >
               {t('nav.products')}
             </button>
             <button
               onClick={() => scrollToSection('pharmacies')}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-rose-500 hover:bg-gray-50 w-full text-left"
+              className="block px-3 py-2 w-full text-base font-medium text-left text-gray-800 rounded-md hover:text-rose-500 hover:bg-gray-50"
             >
               {t('nav.pharmacies')}
             </button>
             <button
               onClick={() => scrollToSection('jobs')}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-rose-500 hover:bg-gray-50 w-full text-left"
+              className="block px-3 py-2 w-full text-base font-medium text-left text-gray-800 rounded-md hover:text-rose-500 hover:bg-gray-50"
             >
               {t('nav.jobs')}
             </button>
             <button
               onClick={toggleLanguage}
-              className="block w-full text-left px-3 py-2 rounded-md text-base font-medium text-rose-500 hover:bg-rose-50"
+              className="block px-3 py-2 w-full text-base font-medium text-left text-rose-500 rounded-md hover:bg-rose-50"
             >
               {language === 'en' ? 'العربية' : 'English'}
             </button>
