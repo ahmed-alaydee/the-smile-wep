@@ -37,14 +37,14 @@ const Footer: React.FC = () => {
               </a>
               
 <a
-   href="https://wa.me/01103133750"
+  href="https://wa.me/201103133750"
   target="_blank"
   rel="noopener noreferrer"
   className="text-gray-400 transition-colors hover:text-rose-400"
 >
   <FaWhatsapp className="w-5 h-5" />
 </a>
-              
+      
                       <a
   href="tel:+01103133750"
   className="text-gray-400 transition-colors hover:text-rose-400"
