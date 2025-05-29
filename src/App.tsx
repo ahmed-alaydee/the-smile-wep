@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
@@ -7,35 +8,39 @@ import PharmaciesSection from './components/PharmaciesSection';
 import JobsSection from './components/JobsSection';
 import MapSection from './components/MapSection';
 import Footer from './components/Footer';
+import ProductDetail from './components/ProductDetail';
 import { LanguageProvider } from './context/LanguageContext';
 import { ThemeProvider } from './context/ThemeContext';
-import ProductDetail from './components/ProductDetail';
 
 function App() {
-  const [selectedProduct, setSelectedProduct] = useState<number | null>(null);
-
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <div className="min-h-screen font-sans transition-colors duration-200 dark:bg-gray-900 dark:text-white">
-        {selectedProduct !== null ? (
-          <ProductDetail 
-            productId={selectedProduct} 
-            onClose={() => setSelectedProduct(null)} 
-          />
-        ) : (
-          <>
+        <Router>
+          <div className="min-h-screen font-sans transition-colors duration-100 dark:bg-gray-900 dark:text-white">
             <Navbar />
-            <HeroSection />
-            <AboutSection />
-            <ProductsSection onProductSelect={setSelectedProduct} />
-            <PharmaciesSection />
-            <JobsSection />
-            <MapSection />
-            <Footer />
-          </>
-        )}
-      </div>
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <>
+                    <HeroSection />
+                    <AboutSection />
+                    <ProductsSection />
+                    <PharmaciesSection />
+                    <JobsSection />
+                    <MapSection />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route path="/products/:id" element={<ProductDetail />} />
+                    
+              <Route path="/products" element={<ProductsSection />} />
+              <Route path="/HeroSection" element={< HeroSection />} />
+            </Routes>
+          </div>
+        </Router>
       </LanguageProvider>
     </ThemeProvider>
   );

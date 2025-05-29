@@ -1,33 +1,13 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import desktopBg from '../image/bahground-1.png';
 import mobileBg from '../image/image-ditals/productall.jpeg';
 import { useMediaQuery } from 'react-responsive';
 
 const HeroSection: React.FC = () => {
-  const { t, language } = useLanguage();
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const subtitleRef = useRef<HTMLParagraphElement>(null);
-  const descriptionRef = useRef<HTMLParagraphElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
-
+  const { t } = useLanguage();
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const backgroundImage = isMobile ? mobileBg : desktopBg;
-
-  useEffect(() => {
-    const elements = [titleRef.current, subtitleRef.current, descriptionRef.current, buttonRef.current];
-    elements.forEach((el, index) => {
-      if (el) {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        setTimeout(() => {
-          el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-          el.style.opacity = '1';
-          el.style.transform = 'translateY(0)';
-        }, 300 + index * 200);
-      }
-    });
-  }, []);
 
   const scrollToProducts = () => {
     const element = document.getElementById('products');
@@ -37,49 +17,44 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <div
-      className="flex overflow-hidden relative justify-center items-center min-h-screen bg-white dark:text-gray-100"
+    <section
+      className="relative flex items-center justify-center min-h-screen px-6 bg-black bg-opacity-60"
       style={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: 'cover',
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(${backgroundImage})`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
       }}
     >
-      {/* Main Content */}
-   <div className="relative z-10 px-4 mx-auto max-w-4xl text-center sm:px-6 lg:px-8">
-  <h1
-    ref={titleRef}
-    className="mb-4 text-3xl sm:text-4xl md:text-6xl font-bold text-[#5A1F1F] md:text-white text-center font-playfair"
-    style={{ textShadow: '0 2px 4px rgba(0,0,0,0.15)', }}
-  >
-    The Smile Cosmetics {/* {t('hero.title')} */}
-  </h1>
+      <div className="z-10 max-w-3xl space-y-8 text-center text-white">
+        <h1 className="text-5xl md:text-7xl font-poppins drop-shadow-2xl font-(family-name:--my-font)">
+          The Smile Cosmetics
+        </h1>
+        <p className="text-2xl italic font-semibold text-rose-300 drop-shadow-md">
+          {t('hero.subtitle')}
+        </p>
+        <p className="text-lg md:text-xl text-rose-200 drop-shadow-md">
+          {t('hero.description')}
+        </p>
 
-  <p
-    ref={subtitleRef}
-    className="mb-4 text-lg sm:text-xl md:text-3xl italic font-medium text-[#7A2E2E] md:text-rose-600 text-center"
-  >
-    {t('hero.subtitle')}
-  </p>
-
-  <p
-    ref={descriptionRef}
-    className="mx-auto mb-6 max-w-md text-base sm:text-lg md:text-xl font-semibold leading-relaxed text-[#4A1D1D] md:text-rose-600 text-center md:max-w-2xl bg-white/70 md:bg-transparent px-4 py-2 md:px-0 md:py-0 rounded-xl md:rounded-none shadow-sm md:shadow-none"
-  >
-    {t('hero.description')}
-  </p>
-
-  <button
-    ref={buttonRef}
-    onClick={scrollToProducts}
-    className="px-8 py-3 font-medium text-white bg-rose-500 rounded-full shadow-lg transition transform hover:bg-rose-600 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-opacity-50"
-  >
-    {t('hero.cta')}
-  </button>
-</div>
-
-    </div>
+        <button
+          onClick={scrollToProducts}
+          className="inline-flex items-center gap-3 px-8 py-4 mt-6 text-lg font-semibold transition duration-300 bg-white rounded-xl bg-opacity-20 backdrop-blur-md text-rose-400 hover:bg-opacity-40 hover:shadow-lg"
+        >
+          {t('hero.cta')}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </button>
+      </div>
+    </section>
   );
 };
 
