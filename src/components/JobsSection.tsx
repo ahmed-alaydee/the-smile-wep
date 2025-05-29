@@ -203,7 +203,7 @@ const JobsSection: React.FC = () => {
                   </select>
                 </div>
 
-                <div>
+                {/* <div>
                   <label htmlFor="expectedSalary" className="block mb-1 text-sm font-medium text-gray-700">
                     {t('jobs.expectedSalary')}
                   </label>
@@ -217,11 +217,11 @@ const JobsSection: React.FC = () => {
                     required
                     className="w-full px-4 py-3 text-black bg-white border border-gray-300 shadow-sm rounded-2xl focus:ring-2 focus:ring-rose-400 focus:outline-none"
                   />
-                </div>
+                </div> */}
 
                 <div>
                   <label htmlFor="experience" className="block mb-1 text-sm font-medium text-gray-700">
-                    {t('jobs.experience')}
+                    {t('Jobs Experience')}
                   </label>
                   <input
                     type="text"
