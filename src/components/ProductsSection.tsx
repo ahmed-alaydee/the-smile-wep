@@ -49,14 +49,14 @@ const ProductsSection: React.FC = () => {
                 </h3>
 
                 {/* ⭐⭐⭐⭐⭐ Stars */}
-                <div className="flex mb-2">
+                {/* <div className="flex mb-2">
                   {[...Array(5)].map((_, index) => (
                     <Star
                       key={index}
                       className="w-4 h-4 text-yellow-400 fill-yellow-400"
                     />
                   ))}
-                </div>
+                </div> */}
 
                 <p className="mb-4 text-gray-700 line-clamp-2">
                   {language === 'en'
