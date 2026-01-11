@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { products } from '../utils/data';
-import { ShoppingBag } from 'lucide-react';
+import { ShoppingBag, Star } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const ProductsSection: React.FC = () => {
@@ -48,8 +48,20 @@ const ProductsSection: React.FC = () => {
                   {language === 'en' ? product.name : product.nameAr}
                 </h3>
 
+                {/* ⭐⭐⭐⭐⭐ Stars */}
+                <div className="flex mb-2">
+                  {[...Array(5)].map((_, index) => (
+                    <Star
+                      key={index}
+                      className="w-4 h-4 text-yellow-400 fill-yellow-400"
+                    />
+                  ))}
+                </div>
+
                 <p className="mb-4 text-gray-700 line-clamp-2">
-                  {language === 'en' ? product.description : product.descriptionAr}
+                  {language === 'en'
+                    ? product.description
+                    : product.descriptionAr}
                 </p>
 
                 <div className="flex items-center justify-between">
